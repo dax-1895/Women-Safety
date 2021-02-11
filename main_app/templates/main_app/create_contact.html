@@ -12,10 +12,10 @@
                 {% csrf_token %}
                 {{form.as_p}}
                 <br>
-                
+                <button style="color:white; background-color:blueviolet;" class="btn btn info" name="submit" type="submit"><b>Create</b></button>
+                <button style="color:white; background-color:blueviolet;" class="btn btn-info" name="submit" type="submit"><b>Update</b></button>
             </form>
-            <button style="color:white; background-color:blueviolet;  border-radius: 25px;text-align: center;justify-content: center;" 
-                class="btn" name="submit" type="submit"><b>Create</b></button>
+            
         </div>
     {% endblock %}
 
