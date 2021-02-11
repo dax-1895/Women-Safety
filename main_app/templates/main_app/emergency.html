@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<body style="height:1000px; max-width:100%; background-color:white;margin-top:60px;">
+    <div class="jumbotron container" style="background-color: white;text-align: center;justify-content: center;">
+		<div>
+			<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+			<h1 class="display-4" style="color: black;">Emergency Situation</h1>
+			<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+			<p class="lead" >Do not panic help is on its way</p>
+            <br>
+            {% for contact in contacts %}
+            <h4 style="color:black">Message sent to {{contact.name}} at {{contact.phone_number}}</h4>
+            <h4 style="color:black">Email sent to {{contact.name}} at {{contact.email}}</h4>
+            <br>
+            
+            {% endfor %}
+			<hr class="my-10">
+            <div>
+                <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+                <p>Police stations</p>
+                <a href="http://www.google.com/maps/search/police+station/"><button style=" margin-left:auto;margin-right:auto;display:block;">Get Nearest Police Station Location</button></a>
+                </div>
+                <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+                <p>Hospitals</p>
+                <a href="http://www.google.com/maps/search/hospital/"><button style=" margin-left:auto;margin-right:auto;display:block;">Get Nearest Hospital</button></a>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="container"style="background-color: white;text-align: center;justify-content: center;">
+
+		<div class="row"style="background-color: white;text-align: center;justify-content: center;">
+			<div class="col-md-7"style="background-color: white;text-align: center;justify-content: center;">
+				<h1> Please use the following methods for immediate threat mitigation</h1>
+				<hr><br>
+                <h3>Play sirens</h3>
+                <audio controls autoplay>
+                    <source src="https://actions.google.com/sounds/v1/emergency/emergency_siren_close_long.ogg" type="audio/mpeg" >
+                    Audio not found
+                </audio>
+                <br>
+                <br>
+				<h3>Watch these self defence techniques</h3>
+				<br>
+                <h2> Have your keys stick out from one side of your fist for hammer strikes. </h2>
+                <video controls autoplay>
+                    <source src="https://thumbs.gfycat.com/FluffyFlashyCockroach-mobile.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video> 
+                <br>
+                <h2>If someone is coming at you from the front, a groin kick may deliver enough force to paralyze your attacker. </h2>
+                <video controls autoplay>
+                    <source src="https://thumbs.gfycat.com/MetallicBoilingGermanshorthairedpointer-mobile.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video> 
+                <br>
+                <h2> Heel Palm Strike</h2>
+                <video controls autoplay="" preload="auto" playsinline="">
+                    <source src="https://thumbs.gfycat.com/InnocentImpassionedBrocketdeer-mobile.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video> 
+            </div>
+        </div>
+    </div>
+    
+
+
+{% endblock %}
+
+</html>

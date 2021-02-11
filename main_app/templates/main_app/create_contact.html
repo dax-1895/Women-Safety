@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+
+<html lang="en">
+    {% block content %}
+    <body style="background-color:white;">
+        <div class="container" style="justify-content: center;">
+            <h1 style="text-align: center;";>Create Contacts</h1>
+            <hr>
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                
+            </form>
+            <button style="color:white; background-color:blueviolet;  border-radius: 25px;text-align: center;justify-content: center;" 
+                class="btn" name="submit" type="submit"><b>Create</b></button>
+        </div>
+    {% endblock %}
+
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%  extends 'main_app/common.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+	<body >
+	<br><br>
+
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body" style="background-color:rgba(128, 128, 128, 0.438);width: 100%;" >
+
+
+					<p style="color:black;" ><strong>Are you sure you want to permanently remove {{item}} contact ?</strong></p>
+
+					<form action="{% url 'main_app:delete_contact' item.id  %}" method="POST">
+
+						{% csrf_token %}
+						<a style="color:white;  border-radius: 20px;" class="btn btn-danger" href="{% url 'main_app:emergency_contact' %}"><b>Cancel</b></b></a>
+
+						<input style="color:white; border-radius: 20px; font-weight: 700;" class="btn btn-primary" type="submit" name="Yes">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+</html>

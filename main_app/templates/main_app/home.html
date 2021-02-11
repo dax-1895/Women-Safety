@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends 'main_app/common.html' %}
+{% block content %}
+<html lang="en">
+<body >  
+	<!-- Emergency button -->
+	<div style="text-align: center;justify-content: center;background-color: rgb(132, 132, 245);">
+		<div class="jumbotron container" style="text-align: center;justify-content: center;background: none;color: white !important;">
+			<div>
+				<h1 class="display-4" style="color: white;font-weight: 600;">Incase of emergency press the red button</h1>
+			</div>
+		</div>
+		<div class="row" style="text-align: center;justify-content: center;background:none;">
+			<div class="col-md-7" style="background-color: white;text-align: center;justify-content: center;background: none;">
+				<a class="btn btn-danger  btn btn-block" href="/emergency" style="color:white;height: auto;padding: 25px; " ><b>EMERGENCY</b></a>
+			</div>
+		</div>
+	</div>
+	<!--Nearby Safe Location-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+					<div class="card" style="text-align: center;justify-content: center;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;width: 100%;height: 300px;">
+						<div class="container" style="padding: 2px 16px;">
+							<h3>Safe Places Around you</h3>
+							<div>
+								<p>Police stations: <a href="http://www.google.com/maps/search/police+station/"><button  class="btn btn-primary" style=" margin-left:auto;margin-right:auto;display:block;">Get Nearest Police Station Location</button></a></p>
+								<p>Hospitals: <a href="http://www.google.com/maps/search/hospital/"><button class="btn btn-primary" style=" margin-left:auto;margin-right:auto;display:block;">Get Nearest Hospital</button></a></p>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<!--Play Siren for immediate help-->
+				<div class="col-sm-6">
+					<div class="card" style="text-align: center;justify-content: center;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;width: 100%;height: 300px;">
+						<div class="container" style="padding: 2px 16px;">
+							<h3>Play sirens</h3>
+							<audio controls autoplay>
+								<source src="https://actions.google.com/sounds/v1/emergency/emergency_siren_close_long.ogg" type="audio/ogg" >
+								Audio not found
+							</audio>
+						</div>
+					</div> 
+				</div>
+		</div>
+
+	</div>
+{% endblock %}
+</html>
