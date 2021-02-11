@@ -30,8 +30,8 @@ def send_email(name, dest, link):
     server.quit()
 
 def send_message(name,number,link):
-    account_sid ='ACd74ae6566e9b3a12e19ecac0baa2fb98'
-    auth_token = '64ef373ad6445a5d76a578876b9be93d'
+    account_sid ='ACd74ae6566e9b3a12e19ecac0baa2fb9800'
+    auth_token = '64ef373ad6445a5d76a578876b9be93d00'
     client = Client(account_sid, auth_token)
 
     message = client.messages \
