@@ -85,7 +85,6 @@ def create_contact(request):
             return redirect('main_app:emergency_contact')
         messages.error(request, f"Invalid username or password")
     context = {'form': form}
-    create=True
     return render(request, 'main_app/create_contact.html', context)
 
 
@@ -100,7 +99,6 @@ def update_contact(request, pk):
             messages.error(request, f"{name} updated successfully!!")
             return redirect('main_app:emergency_contact')
     context = {'form': form}
-    create=False
     return render(request, 'main_app/update_contacts.html', context)
 
 
@@ -140,8 +138,6 @@ def emergency(request):
     return render(request,'main_app/emergency.html',context)
 
 
-def helpline_numbers(request):
-    return render(request, 'main_app/helpline_numbers.html', {'title': 'helpline_numbers'})
 
 
 

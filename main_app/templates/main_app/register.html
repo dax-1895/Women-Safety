@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends "main_app/common.html" %}
-{% load static %}
+
 
 <body lang="en">
     {% block content %}
@@ -20,7 +20,6 @@
                     <p class="lead" style=" text-align: center;"><b>Create Your
                             Account</b></p>
 
-                    <!-- <img src="{% static 'Images/signup-image.jpg' %}" alt="" srcset="" style=""> -->
                     <form method="POST" class="form-style" style="background-color: white; margin-top: 5%;   ">
                         <br><br>
                         {% csrf_token %}

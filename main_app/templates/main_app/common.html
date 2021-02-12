@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 
 <head>
@@ -29,7 +28,6 @@
     integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../../static/css/styles.css">
 
   <style>
     body {
@@ -72,7 +70,22 @@
     .p20 {
         padding: 20px;
     }
+    
+  .carousel-container{
+        padding: 3% 0;
+        text-align: center;
+    }
+  .carousel-item{
+        
+        /* height: initial !important; */
+        width: inherit !important;
+        visibility: visible !important;
+        position: relative !important;
 
+    }
+  .carousel .carousel-item{
+        height:auto !important;
+    }
     .canvasbox {
         border-radius: 3px;
         margin-right: 10px;

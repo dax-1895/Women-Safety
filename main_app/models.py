@@ -8,7 +8,7 @@ class contact(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="contact", null=True)
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    phone_number=models.PositiveIntegerField(default=123456789)
+    phone_number=models.PositiveIntegerField(default=916370926031) #registered twilio number!
     Father = 'Father'
     Mother = 'Mother'
     Brother = 'Brother'
