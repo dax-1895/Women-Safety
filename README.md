@@ -36,3 +36,5 @@ The hosted project is not fully functional due to database hosting issues.
 1. Please use the default as the phone number of the emergency contacts as Twilio only sends messages to verified numbers
 https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account
 2. The hosted version of the website https://women-safety.azurewebsites.net/  is not fully functional due to database integration issues.
+## Other Links
+Youtube Link:https://youtu.be/DeBn9JPYN8w
