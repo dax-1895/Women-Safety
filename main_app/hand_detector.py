@@ -90,8 +90,7 @@ while capture.isOpened():
         
         if count_defects == 4:
             danger=True
-            print("Danger")
-            break
+            cv2.putText(frame,'Danger',(0,50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0,0,255), 3, cv2.LINE_AA)
         else:
             pass
     except:
