@@ -6,13 +6,13 @@
     {% block content %}
     <body style="background-color:white;">
         <div class="container" style="justify-content: center;">
-            <h1 style="text-align: center;";>Create Contacts</h1>
+            <h1 style="text-align: center;";>Update Contacts</h1>
             <hr>
             <form method="POST">
                 {% csrf_token %}
                 {{form.as_p}}
                 <br>
-                <button style="color:white; background-color:blueviolet;" class="btn btn info" name="submit" type="submit"><b>Create</b></button>
+                <button style="color:white; background-color:blueviolet;" class="btn btn info" name="submit" type="submit"><b>Update</b></button>
             </form>
             
         </div>

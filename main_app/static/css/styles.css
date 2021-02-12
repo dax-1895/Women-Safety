@@ -1,18 +1,22 @@
-
+.video-layout
+{
+    margin-left: 20% !important;
+    width:60% !important;
+}
 .carousel-container{
     padding: 3% 0;
+    text-align: center;
 }
 .carousel-item{
     
-    height: initial !important;
+    /* height: initial !important; */
     width: inherit !important;
     visibility: visible !important;
     position: relative !important;
-    top: 0;
-    left: 0;
+    margin-left: 15%;
 
 }
 
 .carousel{
-    height: initial !important;
+    /* height: initial !important; */
 }

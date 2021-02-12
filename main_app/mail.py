@@ -4,7 +4,6 @@ from email.utils import formataddr
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import base64
-
 from twilio.rest import Client
 
 # Before using your email,  please ensure that you have set you gmail account to enable "less secure apps"
@@ -30,8 +29,8 @@ def send_email(name, dest, link):
     server.quit()
 
 def send_message(name,number,link):
-    account_sid ='ACd74ae6566e900b3a12e19ecac0baa2fb98'
-    auth_token = 'ebc8498ac07910096baeb784da950540d7'
+    account_sid ='ACd74ae6566e9b3a12e19ecac0baa2fb98'
+    auth_token = 'ebc8498ac079196baeb784da950540d7'
     client = Client(account_sid, auth_token)
 
     message = client.messages \

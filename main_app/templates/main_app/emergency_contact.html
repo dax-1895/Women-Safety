@@ -8,57 +8,45 @@
 
 	<div class="jumbotron container" style="background-color: white;text-align: center;justify-content: center;">
 		<div>
-			<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-			<h1 class="display-4" style="color: black;">Emergency
-				Contacts</h1>
-			<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
-			<p class="lead" >Save Your Contacts</p>
+			<h1 class="display-4" style="color: black;">Emergency Contacts</h1>
 			<hr class="my-10">
+			<h6><strong> Saved Contacts: {{total_contacts}}</strong></h6>
+			<a style="color:white; background-color:blueviolet;height: auto;" class="btn btn-primary-lg" href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
+			<div class="row"style="background-color: white;text-align: center;justify-content: center;">
+				<div class="col-md-7"style="background-color: white;text-align: center;justify-content: center;">
+					
+				
+					<table class="table">
+						<thead class="thead" style="color:black; background-color:#E9ECEF;">
+							<tr>
+								<th>Name</th>
+								<th>Relation</th>
+								<th>Email</th>
+								<th>Phone number</th>
+								<th>Update</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+	
+						{% for contact in contacts.all %}
+						<tbody class="table-striped">
+							<tr>
+								<td>{{contact.name}}</td>
+								<td>{{contact.relation}}</td>
+								<td>{{contact.email}}</td>
+								<td>{{contact.phone_number}}</td>
+								<td><a style="color:white; background-color:grey;height: auto;" class="btn btn-sm btn-info" href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
+								<td><a style="color:white; background-color:rgb(217,48,37);height:auto;" class="btn btn-sm btn-danger" href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
+							</tr>
+						</tbody>
+						<br>
+						{% endfor %}
+	
+					</table>
+				</div>
+					</div>
 		</div>
 	</div>
-	<div class="container"style="background-color: white;text-align: center;justify-content: center;">
-
-		<div class="row"style="background-color: white;text-align: center;justify-content: center;">
-			<div class="col-md-7"style="background-color: white;text-align: center;justify-content: center;">
-				<h6><strong> Saved Contacts: {{total_contacts}}</strong></h6>
-				<hr><br>
-
-				<a style="color:white; background-color:blueviolet;height: auto;" class="btn btn-primary-lg"
-					href="{% url 'main_app:create_contact' %}"><b>Create Contact</b></a>
-				<br>
-				<table class="table">
-					<thead class="thead" style="color:black; background-color:#E9ECEF;">
-						<tr>
-							<th>Name</th>
-							<th>Relation</th>
-							<th>Email</th>
-							<th>Phone number</th>
-							<th>Update</th>
-							<th>Delete</th>
-						</tr>
-					</thead>
-
-					{% for contact in contacts.all %}
-					<tbody class="table-striped">
-						<tr>
-							<td>{{contact.name}}</td>
-							<td>{{contact.relation}}</td>
-							<td>{{contact.email}}</td>
-							<td>{{contact.phone_number}}</td>
-							<td><a style="color:white; background-color:grey;height: auto;" class="btn btn-sm btn-info"
-									href="{% url 'main_app:update_contact' contact.id %}"><b>Update</b></a></td>
-							<td><a style="color:white; background-color:rgb(217,48,37);height:auto;" class="btn btn-sm btn-danger"
-									href="{% url 'main_app:delete_contact' contact.id %}"><b>Delete</b></a></td>
-						</tr>
-					</tbody>
-					<br>
-					{% endfor %}
-
-				</table>
-			</div>
-		</div>
-	</div>
-<br><br><br>
 
 {% endblock %}
 

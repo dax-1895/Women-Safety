@@ -101,7 +101,7 @@ def update_contact(request, pk):
             return redirect('main_app:emergency_contact')
     context = {'form': form}
     create=False
-    return render(request, 'main_app/create_contact.html', context)
+    return render(request, 'main_app/update_contacts.html', context)
 
 
 def delete_contact(request, pk):
@@ -133,7 +133,7 @@ def emergency(request):
     for j in contacts:
         emails.append(j._meta.get_field("email"))
     name = request.user.username
-    link = "http://www.google.com/maps/place/"+lat+","+log
+    link = "http://www.google.com/maps/place/"+str(lat)+","+str(log)
     for c in contacts:
         send_email(name, c.email, link)
         send_message(name,c.phone_number,link)
