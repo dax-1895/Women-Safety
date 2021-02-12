@@ -83,8 +83,6 @@ PySocks==1.7.1
 python-dateutil==2.8.1
 python-geoip==1.2
 pytz==2020.1
-pywin32==228
-pywinpty==0.5.7
 pyzmq==18.1.1
 qtconsole==4.7.4
 QtPy==1.9.0
