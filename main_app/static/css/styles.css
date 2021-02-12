@@ -1,8 +1,4 @@
-.video-layout
-{
-    margin-left: 20% !important;
-    width:60% !important;
-}
+
 .carousel-container{
     padding: 3% 0;
     text-align: center;
@@ -13,10 +9,12 @@
     width: inherit !important;
     visibility: visible !important;
     position: relative !important;
-    margin-left: 15%;
 
 }
 
 .carousel{
     /* height: initial !important; */
+}
+.carousel .carousel-item{
+    height:auto !important;
 }
