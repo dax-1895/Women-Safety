@@ -45,5 +45,5 @@ The opencv window will appear. It shows a danger message when you show 5 fingers
 https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account
 2. The hosted version of the website https://women-safety.azurewebsites.net/  is not fully functional due to database integration issues.
 ## Other Links
-Youtube Link:https://youtu.be/DeBn9JPYN8w
-Drive Link to the documentation: https://drive.google.com/drive/u/0/folders/1NTY52wc3TRxutoAAjzVLdrC0yAOqrDsc
+1. Youtube Link:https://youtu.be/DeBn9JPYN8w
+2. Drive Link to the documentation: https://drive.google.com/drive/u/0/folders/1NTY52wc3TRxutoAAjzVLdrC0yAOqrDsc
